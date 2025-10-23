@@ -42,6 +42,7 @@ defineProps({
   padding: 20px 15px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(150, 150, 150, 0.5);
+  background-color: var(--el-bg-color);
 }
 
 .item-card__header {
@@ -52,7 +53,7 @@ defineProps({
 .item-card__body {
   margin: 10px 0 20px;
   font-size: 95%;
-  color: #525252;
+  color: var(--el-text-color-secondary);
 }
 
 .item-card__footer {

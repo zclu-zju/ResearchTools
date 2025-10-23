@@ -121,10 +121,6 @@ const changeCategory = (category) => {
   margin: 20px 0;
 }
 
-.category-menu {
-
-}
-
 .category-menu-item {
   display: flex;
   justify-content: space-between;

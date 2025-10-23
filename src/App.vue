@@ -30,7 +30,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <el-container class="layout-container dark">
+  <el-container class="layout-container">
     <el-header class="layout-header" height="60px">
       <div class="layout-header__inner">
         <div class="layout-header__left"></div>
@@ -60,6 +60,7 @@ onMounted(() => {
   flex-direction: column;
   height: calc(100vh - 20px);
   overflow: hidden;
+  background-color: var(--el-bg-color-page);
 }
 
 .layout-header {
@@ -75,7 +76,6 @@ onMounted(() => {
   align-items: center;
 }
 
-/* Header 内部内容 */
 .layout-header__inner {
   display: flex;
   justify-content: flex-end;
@@ -92,10 +92,5 @@ onMounted(() => {
   flex: 1;
   margin-top: 60px;
   padding: 24px 40px;
-  background-color: #fafafa;
-}
-
-.dark .layout-main {
-  background-color: var(--el-bg-dark);
 }
 </style>
