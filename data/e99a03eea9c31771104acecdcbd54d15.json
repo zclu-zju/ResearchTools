@@ -1,0 +1,7 @@
+{
+  "title": "ZoteroBib",
+  "url": "https://zbib.org",
+  "description": "Zotero的简化版在线引文生成工具。无需注册，直接输入信息或DOI即可生成引文。",
+  "category": "其他工具",
+  "icon": "https://zbib.org/static/favicon.ico"
+}

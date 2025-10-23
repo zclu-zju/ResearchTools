@@ -1,0 +1,7 @@
+{
+  "title": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov",
+  "description": "由美国国家医学图书馆维护的生物医学文献数据库。涵盖MEDLINE收录的数千万篇期刊文章。支持高级检索、MeSH术语和临床查询。",
+  "category": "文献检索",
+  "icon": "https://cdn.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon.png"
+}

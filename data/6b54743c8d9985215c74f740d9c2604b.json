@@ -1,0 +1,7 @@
+{
+  "title": "KNIME",
+  "url": "https://www.knime.com",
+  "description": "开源的数据分析、报告和集成平台。采用图形化界面，通过拖拽节点构建分析流程，适合非编程背景的用户。",
+  "category": "数据分析",
+  "icon": "https://www.knime.com/favicon.ico"
+}

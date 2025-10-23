@@ -1,0 +1,7 @@
+{
+  "title": "Connected Papers",
+  "url": "https://www.connectedpapers.com",
+  "description": "通过可视化图谱展示某篇论文的相关研究网络。帮助快速了解领域发展脉络和关键文献。输入一篇论文即可生成文献关系图。",
+  "category": "文献综述",
+  "icon": "https://www.connectedpapers.com/favicon.ico"
+}

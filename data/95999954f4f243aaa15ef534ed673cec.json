@@ -1,0 +1,7 @@
+{
+  "title": "Unpaywall（浏览器插件）",
+  "url": "https://unpaywall.org",
+  "description": "一款浏览器扩展插件，当访问付费墙后的论文时，会自动在开放获取资源中寻找免费的PDF版本。",
+  "category": "其他工具",
+  "icon": "https://unpaywall.org/favicon.png"
+}

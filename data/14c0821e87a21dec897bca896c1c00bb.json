@@ -1,0 +1,7 @@
+{
+  "title": "Sci-Hub",
+  "url": "https://sci-hub.se",
+  "description": "绕过付费墙获取学术论文的平台，输入DOI或URL即可下载PDF。覆盖大量出版社文献，但存在法律争议。建议仅在无法通过正规渠道获取时使用。",
+  "category": "文献检索",
+  "icon": "https://sci-hub.se/favicon.ico"
+}
