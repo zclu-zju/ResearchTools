@@ -1,0 +1,7 @@
+{
+  "title": "Google Colab",
+  "url": "https://colab.research.google.com",
+  "description": "Google提供的免费Jupyter笔记本环境，运行在云端。无需配置环境，即可使用Python进行数据分析和机器学习实验。",
+  "category": "数据分析",
+  "icon": "https://colab.research.google.com/favicon.ico"
+}

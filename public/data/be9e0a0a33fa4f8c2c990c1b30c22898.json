@@ -1,0 +1,7 @@
+{
+  "title": "DOI Resolver",
+  "url": "https://doi.org",
+  "description": "通过DOI（数字对象唯一标识符）解析和访问学术文献的官方入口。输入DOI即可直达论文页面。",
+  "category": "其他工具",
+  "icon": "https://doi.org/images/favicons/favicon.ico"
+}

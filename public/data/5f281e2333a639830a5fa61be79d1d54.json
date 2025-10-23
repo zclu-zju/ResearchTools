@@ -1,0 +1,7 @@
+{
+  "title": "CiteSpace",
+  "url": "http://cluster.cis.drexel.edu/~cchen/citespace",
+  "description": "用于分析和可视化共引网络、合作网络、关键词共现等的软件。适合进行科学知识图谱分析。",
+  "category": "文献综述",
+  "icon": "http://cluster.cis.drexel.edu/favicon.ico"
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Scite（智能引文分析）",
+  "url": "https://scite.ai",
+  "description": "一个智能引文分析工具，可以显示某篇论文被其他文献如何引用（支持、反对、提及）。有助于评估论文影响力。",
+  "category": "其他工具",
+  "icon": "https://scite.ai/favicon.ico"
+}

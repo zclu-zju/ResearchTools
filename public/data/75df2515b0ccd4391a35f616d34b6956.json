@@ -1,0 +1,7 @@
+{
+  "title": "arXiv",
+  "url": "https://arxiv.org",
+  "description": "开放获取的预印本服务器，主要涵盖物理学、数学、计算机科学、计量生物学、计量金融学和统计学等领域。可以获取最新的研究成果。",
+  "category": "文献检索",
+  "icon": "https://arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png"
+}

@@ -1,0 +1,7 @@
+{
+  "title": "RStudio",
+  "url": "https://posit.co/download/rstudio-desktop",
+  "description": "R语言的集成开发环境（IDE），提供了代码编辑、调试、可视化等功能。极大地提升了R语言的使用效率。",
+  "category": "数据分析",
+  "icon": "https://posit.co/wp-content/themes/Posit/dist/images/favicon/favicon-32x32.png"
+}

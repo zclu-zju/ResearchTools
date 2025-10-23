@@ -1,0 +1,7 @@
+{
+  "title": "Jupyter Notebook",
+  "url": "https://jupyter.org",
+  "description": "开源的交互式计算环境，支持Python、R、Julia等多种语言。广泛用于数据分析、可视化和机器学习教学与研究。可导出为HTML、PDF等格式。",
+  "category": "数据分析",
+  "icon": "https://jupyter.org/favicon.ico"
+}

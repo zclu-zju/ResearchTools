@@ -1,0 +1,7 @@
+{
+  "title": "VOSviewer",
+  "url": "https://www.vosviewer.com",
+  "description": "用于构建和可视化文献计量网络的软件，如共引、合著、关键词共现等。适合进行科学知识图谱分析。支持从Web of Science、Scopus等导入数据。",
+  "category": "文献综述",
+  "icon": "https://www.vosviewer.com/resources/favicon.ico"
+}
