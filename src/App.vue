@@ -45,7 +45,6 @@ onMounted(() => {
         </el-space>
       </div>
     </el-header>
-
     <el-main class="layout-main">
       <el-scrollbar>
         <router-view/>

@@ -1,54 +1,75 @@
 <template>
-  <el-row style="padding: 0 10%">
-    <el-col :span="4" :offset="3">
-      <el-affix :offset="120">
-        <div class="category-box">
-          <div class="box-title">工具分类</div>
-          <div class="box-search">
-            <el-input
-                v-model="searchText"
-                :prefix-icon="Search"
-                placeholder="搜索工具..."
-                clearable
-                size="large"
-            />
-          </div>
-          <div class="category-menu">
-            <div class="category-menu-item"
-                 :class="{'active': category===''}"
-                 @click="changeCategory()"
-            >
-              <span class="category-menu-item-title">所有工具</span>
-              <span class="category-menu-item-length">{{ data.total }}</span>
-            </div>
-          </div>
+  <el-space style="align-items: start;" :direction="windowWidth > 780?'horizontal':'vertical'">
+    <el-affix v-if="windowWidth > 780" style="width: 20rem; margin-right: 1rem;" :offset="110">
+      <div class="category-box">
+        <div class="box-title">工具分类</div>
+        <div class="box-search">
+          <el-input
+              v-model="searchText"
+              :prefix-icon="Search"
+              placeholder="搜索工具..."
+              clearable
+              size="large"
+          />
+        </div>
+        <div class="category-menu">
           <div class="category-menu-item"
-               v-for="(item, ix) in categories"
-               :key="item"
-               :class="{'active': category===item}"
-               @click="changeCategory(item)"
+               :class="{'active': category===''}"
+               @click="changeCategory()"
           >
-            <span class="category-menu-item-title">{{ item }} </span>
-            <span class="category-menu-item-length">{{ data.grouped[item].length }}</span>
+            <span class="category-menu-item-title">所有工具</span>
+            <span class="category-menu-item-length">{{ data.total }}</span>
           </div>
         </div>
-      </el-affix>
-    </el-col>
-    <el-col :span="1"></el-col>
-    <el-col :span="16">
-      <el-row :gutter="0">
-        <el-col :xs="24"
-                :sm="24"
-                :md="12"
-                :lg="12"
-                v-for="(item, i) in filteredList" :key="i"
-                style="padding: 0 10px;"
+        <div class="category-menu-item"
+             v-for="(item, ix) in categories"
+             :key="item"
+             :class="{'active': category===item}"
+             @click="changeCategory(item)"
         >
-          <ItemCard :item="item"/>
-        </el-col>
-      </el-row>
-    </el-col>
-  </el-row>
+          <span class="category-menu-item-title">{{ item }} </span>
+          <span class="category-menu-item-length">{{ data.grouped[item].length }}</span>
+        </div>
+      </div>
+    </el-affix>
+    <div v-else>
+      <div class="category-box" style="box-shadow: 0 0 15px rgba(255,190,190,0.05)">
+        <div class="box-search" style="margin-top: 0;">
+          <el-input
+              v-model="searchText"
+              :prefix-icon="Search"
+              placeholder="搜索工具..."
+              clearable
+              size="large"
+          />
+        </div>
+        <el-space class="category-menu" wrap>
+          <el-tag :type="category===''?'primary':'info'"
+                  @click="changeCategory()"
+                  class="category-menu-tag"
+          >
+            所有工具
+          </el-tag>
+          <el-tag
+              :type="category===item?'primary':'info'"
+              v-for="(item, ix) in categories"
+              :key="item"
+              @click="changeCategory(item)"
+              class="category-menu-tag"
+          >
+            <span class="category-menu-item-title">{{ item }} </span>
+          </el-tag>
+        </el-space>
+      </div>
+    </div>
+    <div style="width: 100%; display:flex; flex-wrap: wrap; "
+         :style="{justifyContent: windowWidth > 780?'space-between':'space-around'}"
+    >
+      <ItemCard v-for="(item, i) in filteredList" :item="item"
+                :style="{width: `calc(${100 / cardsColNum}% - 40px)`}"
+      />
+    </div>
+  </el-space>
 </template>
 <script setup>
 import {ref, computed, watch, onMounted} from "vue";
@@ -81,9 +102,7 @@ watch(
 
 const filteredList = computed(() => {
   const key = searchText.value.trim().toLowerCase();
-
   return items.value.filter((item) => {
-    // 分类过滤
     const matchCategory =
         !category.value || item.category === category.value;
 
@@ -103,6 +122,29 @@ const changeCategory = (category) => {
     query: {category: category},
   })
 }
+
+const windowWidth = ref(window.innerWidth);
+const cardsColNum = ref(3);
+const updateColNum = () => {
+  if (windowWidth.value < 992) {
+    cardsColNum.value = 1
+  } else if (windowWidth.value < 1200) {
+    cardsColNum.value = 2
+  } else {
+    cardsColNum.value = 3
+  }
+}
+watch(windowWidth, () => {
+  updateColNum();
+})
+const updateWidth = () => {
+  windowWidth.value = window.innerWidth;
+}
+onMounted(() => {
+  window.addEventListener("resize", () => updateWidth())
+  updateWidth()
+  updateColNum()
+})
 </script>
 
 
@@ -135,5 +177,9 @@ const changeCategory = (category) => {
 .category-menu-item.active, .category-menu-item:hover {
   background-color: #4A90E2;
   color: var(--el-color-white);
+}
+
+.category-menu-tag {
+  cursor: pointer;
 }
 </style>
